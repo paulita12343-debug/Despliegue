@@ -4,10 +4,10 @@ FROM tomcat:10.1-jdk17
 # 2. Limpiar las aplicaciones por defecto de Tomcat
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-# 3. Copiar tu archivo .war como la aplicación principal (ROOT)
-COPY ROOT.war /usr/local/tomcat/webapps/ROOT.war
+# 3. Copiar el .war desde la carpeta dist/ y renombrarlo a ROOT.war dentro del contenedor
+COPY dist/*.war /usr/local/tomcat/webapps/ROOT.war
 
-# 4. Exponer el puerto HTTP
+# 4. Exponer el puerto
 EXPOSE 8080
 
 # 5. Iniciar Tomcat
