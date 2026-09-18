@@ -1,5 +1,5 @@
-# 1. Cambiar a Tomcat 9 con Java 17 (soporta javax.servlet.*)
-FROM tomcat:9.0-jdk17-corretto
+# 1. Cambiar a Tomcat 10 con Java 17 (soporta jakarta.servlet.*)
+FROM tomcat:10.1-jdk17-corretto
 
 # 2. Limpiar las aplicaciones por defecto
 RUN rm -rf /usr/local/tomcat/webapps/*
